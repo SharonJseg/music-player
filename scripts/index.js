@@ -1,4 +1,4 @@
-import songs from './songs.js';
+// import songs from './songs.js';
 import { } from './theme.js';
 
 const container = document.querySelector('.player-container');
@@ -14,6 +14,26 @@ const prevButton = document.querySelector('.fa-backward');
 const playButton = document.querySelector('.fa-play');
 const forwButton = document.querySelector('.fa-forward');
 
+const songs = [
+    {
+        name: 'Foo_Fighters-Saint_Cecilia',
+        image: 'foo-fighters',
+        displayName: 'Saint Cecilia',
+        artist: 'Foo Fighters'
+    },
+    {
+        name: 'Meg_Birch-Thinking_Out_Loud',
+        image: 'meg-birch-love-song',
+        displayName: 'Thinking Out Loud',
+        artist: 'Meg Birch'
+    },
+    {
+        name: 'Gravity-Barnaby_Bright',
+        image: 'gravity',
+        displayName: 'Gravity',
+        artist: 'Barnaby Bright'
+    }
+]
 
 const toggleMusicWithKey = evt => {
     if (evt.keyCode == '32') {
