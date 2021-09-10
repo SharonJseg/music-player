@@ -50,7 +50,7 @@ const loadSong = (song) => {
     artist.textContent = song.artist;
     artist.title = song.artist;
     audioElement.src = `./music/${song.name}.mp3`;
-    image.style.backgroundImage = `url(../images/${song.image}.jpg)`;
+    image.style.backgroundImage = `url(../../../images/${song.image}.jpg)`;
 }
 
 let songIndex = 0;
