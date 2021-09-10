@@ -1,0 +1,14 @@
+.glow {
+  animation: glow 3s alternate ease-in-out infinite;
+  -webkit-animation: glow 3s alternate ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: var(--glowBegin);
+  }
+  
+  100% {
+    box-shadow: var(--glowEnd);
+  }
+}

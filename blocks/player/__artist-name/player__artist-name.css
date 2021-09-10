@@ -1,0 +1,6 @@
+.player__artist-name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 10px 0 0;
+    color: var(--text-color-secondary);
+}

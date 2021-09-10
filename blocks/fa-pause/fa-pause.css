@@ -1,0 +1,9 @@
+.fa-pause {
+  background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%) center center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  line-height: 10rem;
+  text-align: center;
+  color: #fff;
+}

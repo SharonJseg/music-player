@@ -1,0 +1,7 @@
+.player__duration {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: .2rem;
+}

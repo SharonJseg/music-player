@@ -1,0 +1,11 @@
+.player-container__title {
+  padding-top: 40px;
+  margin: 0;
+  text-align: center;
+  color: #f5f5f5;
+  opacity: .9;
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px #000;
+}

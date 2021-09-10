@@ -1,0 +1,7 @@
+.player-controls {
+  margin-top: 30px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

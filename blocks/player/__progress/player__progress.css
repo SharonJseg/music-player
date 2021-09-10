@@ -1,0 +1,40 @@
+.player__progress {
+  background: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%) center center;
+  border-radius: 5px;
+  height: 100%;
+  /*change this to show progress*/
+  width: 0%;
+  transition: width 0.1s linear;
+  position: relative;
+  -webkit-transition: width 0.1s linear;
+  -moz-transition: width 0.1s linear;
+  -ms-transition: width 0.1s linear;
+  -o-transition: width 0.1s linear;
+}
+
+.player__progress::after {
+  content: "";
+  background: var(--primary-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  transition: all .2s ease-in-out;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.player__progress:hover::after {
+  width: 14px;
+  height: 14px;
+  bottom: -4px;
+  transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  -ms-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+}

@@ -1,0 +1,11 @@
+.toggle__text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--secondary-background);
+  margin: 0;
+  opacity: 0;
+  visibility: none;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  display: block;
+}

@@ -1,0 +1,20 @@
+.fa-sun {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: var(--secondary-background);
+}
+
+.fa-sun:hover + .toggle__text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}

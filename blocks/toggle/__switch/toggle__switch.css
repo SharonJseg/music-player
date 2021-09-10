@@ -1,0 +1,6 @@
+.toggle__switch {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2.5rem;
+}

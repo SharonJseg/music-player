@@ -1,0 +1,11 @@
+.fas {
+  font-size: 2rem;
+  color: var(--text-color-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}

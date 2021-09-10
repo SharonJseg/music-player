@@ -1,0 +1,16 @@
+.player__song-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 20px 0 0;
+  color: var(--text-color);
+}
+
+
+@media screen and (max-width: 425px) {
+   .player__song-title {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
