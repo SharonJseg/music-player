@@ -1,11 +1,11 @@
-const image = document.querySelector('img');
-const title = document.querySelector('.title');
-const artist = document.querySelector('.artist');
+const image = document.querySelector('.player__image-container');
+const title = document.querySelector('.player__song-title');
+const artist = document.querySelector('.player__artist-name');
 const audioElement = document.querySelector('audio');
-const progressContainer = document.querySelector('.progress-container');
-const progress = document.querySelector('.progress');
-const currentTimeElement = document.querySelector('.current-time');
-const durationElement = document.querySelector('.duration');
+const progressContainer = document.querySelector('.player__progress-container');
+const progress = document.querySelector('.player__progress');
+const currentTimeElement = document.querySelector('.player__current-time');
+const durationElement = document.querySelector('.player__duration');
 const prevButton = document.querySelector('.fa-backward');
 const playButton = document.querySelector('.fa-play');
 const forwButton = document.querySelector('.fa-forward');
@@ -13,27 +13,30 @@ const forwButton = document.querySelector('.fa-forward');
 const songs = [
     {
         name: 'jacinto-1',
+        image: 'jacinto-1',
         displayName: 'Electric Chill Machine',
         artist: 'Jacinto Design'
     },
     {
         name: 'jacinto-2',
+        image: 'jacinto-2',
         displayName: 'Seven Nation Army (Remix)',
         artist: 'Jacinto Design'
     },
     {
         name: 'jacinto-3',
+        image: 'jacinto-3',
         displayName: 'Goodnight, Disco Queen',
         artist: 'Jacinto Design'
     },
     {
         name: 'metric-1',
+        image: 'metric-1',
         displayName: 'Front Row (Remix)',
         artist: 'Metric/Jacinto Design'
     },
 ]
 
-let isPlaying = false;
 
 const toggleMusicWithKey = evt => {
     if (evt.keyCode == '32') {
@@ -42,6 +45,8 @@ const toggleMusicWithKey = evt => {
 }
 
 const isMusicPlaying = () => (!isPlaying) ? playMusic() : pauseMusic();
+
+let isPlaying = false;
 
 const playMusic = () => {
     isPlaying = true;
@@ -62,9 +67,11 @@ document.addEventListener('keydown', toggleMusicWithKey);
 
 const loadSong = (song) => {
     title.textContent = song.displayName;
+    title.title = song.displayName;
     artist.textContent = song.artist;
+    artist.title = song.artist;
     audioElement.src = `./music/${song.name}.mp3`;
-    image.src = `./images/${song.name}.jpg`;
+    image.style.background = `url(../images/${song.image}.jpg) center center no-repeat`;
 }
 
 let songIndex = 0;

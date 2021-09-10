@@ -10,31 +10,36 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
     <link rel="manifest" href="./images/favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-    <!-- <link rel="stylesheet" href="./vendors/styles/normalize.css"> -->
+    <link rel="stylesheet" href="./vendors/styles/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
     <title>Document</title>
 </head>
 
-<body>
+<body class="page">
     <div class="player-container">
-        <div class="img-container">
-            <img src="./images/jacinto-1.jpg" alt="Album Art">
+        <div class="player__image-container">
+            <h2 class="player-container__title">NOW PLAYING</h2>
         </div>
-        <h2 class="title">Electric Chill Machine</h2>
-        <h3 class="artist">Jacinto</h3>
-        <audio src="./music/jacinto-1.mp3" controls hidden></audio>
-        <div class="progress-container">
-            <div class="progress"></div>
-            <div class="duration-wrapper">
-                <span class="current-time">0:00</span>
-                <span class="duration">-:--</span>
+        <div class="player__controls-container">
+            <svg class="square" version="1.1" x="0px" y="0px" viewBox="0 0 246 246">
+                <path d="M246,246H0V0l0,0C24.8,124.1,121.9,221.2,246,246L246,246z"/>
+            </svg>
+            <div class="player__duration-wrapper">
+                <p class="player__current-time">0:00</p>
+                <p class="player__duration">-:--</p>
             </div>
-        </div>
-
-        <div class="player-controls">
-            <i class="fas fa-backward" id="prev" title="Previous"></i>
-            <i class="fas fa-play main-button" id="play" title="Play"></i>
-            <i class="fas fa-forward" id="next" title="Next"></i>
+            <div class="player__progress-container">   
+                <div class="player__progress"></div>
+            </div>
+            <h2 class="player__song-title" title="">Electric Chill Machine</h2>
+            <h3 class="player__artist-name" title="">Jacinto</h3>
+            <audio src="./music/jacinto-1.mp3" controls hidden></audio>
+    
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="Previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
         </div>
     </div>
 
