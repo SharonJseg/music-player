@@ -1,6 +1,5 @@
 /node_modules
 /.vscode
-/music
 package.json
 package-lock.json
 npmpack.txt

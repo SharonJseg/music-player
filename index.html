@@ -12,29 +12,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="./vendors/styles/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Document</title>
+    <title>Audio Player</title>
 </head>
 
 <body class="page">
+    <header class="header">
+        <label class="toggle">
+            <input type="checkbox" class="toggle__input">
+            <span class="toggle__switch">
+                <i class="fas fa-sun"></i>
+                <span class="toggle__text">Dark Mode</span>
+            </span>
+        </label>
+    </header>
     <div class="player-container">
         <div class="player__image-container">
             <h2 class="player-container__title">NOW PLAYING</h2>
         </div>
         <div class="player__controls-container">
             <svg class="square" version="1.1" x="0px" y="0px" viewBox="0 0 246 246">
-                <path d="M246,246H0V0l0,0C24.8,124.1,121.9,221.2,246,246L246,246z"/>
+                <path d="M246,246H0V0l0,0C24.8,124.1,121.9,221.2,246,246L246,246z" />
             </svg>
             <div class="player__duration-wrapper">
                 <p class="player__current-time">0:00</p>
                 <p class="player__duration">-:--</p>
             </div>
-            <div class="player__progress-container">   
+            <div class="player__progress-container">
                 <div class="player__progress"></div>
             </div>
             <h2 class="player__song-title" title="">Electric Chill Machine</h2>
             <h3 class="player__artist-name" title="">Jacinto</h3>
-            <audio src="./music/jacinto-1.mp3" controls hidden></audio>
-    
+            <audio src="" controls hidden></audio>
+
             <div class="player-controls">
                 <i class="fas fa-backward" id="prev" title="Previous"></i>
                 <i class="fas fa-play main-button" id="play" title="Play"></i>
@@ -43,7 +52,7 @@
         </div>
     </div>
 
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+import songs from './songs.js';
+import { } from './theme.js';
+
+const container = document.querySelector('.player-container');
 const image = document.querySelector('.player__image-container');
 const title = document.querySelector('.player__song-title');
 const artist = document.querySelector('.player__artist-name');
@@ -9,33 +13,6 @@ const durationElement = document.querySelector('.player__duration');
 const prevButton = document.querySelector('.fa-backward');
 const playButton = document.querySelector('.fa-play');
 const forwButton = document.querySelector('.fa-forward');
-
-const songs = [
-    {
-        name: 'jacinto-1',
-        image: 'jacinto-1',
-        displayName: 'Electric Chill Machine',
-        artist: 'Jacinto Design'
-    },
-    {
-        name: 'jacinto-2',
-        image: 'jacinto-2',
-        displayName: 'Seven Nation Army (Remix)',
-        artist: 'Jacinto Design'
-    },
-    {
-        name: 'jacinto-3',
-        image: 'jacinto-3',
-        displayName: 'Goodnight, Disco Queen',
-        artist: 'Jacinto Design'
-    },
-    {
-        name: 'metric-1',
-        image: 'metric-1',
-        displayName: 'Front Row (Remix)',
-        artist: 'Metric/Jacinto Design'
-    },
-]
 
 
 const toggleMusicWithKey = evt => {
@@ -53,6 +30,7 @@ const playMusic = () => {
     audioElement.play();
     playButton.classList.replace('fa-play', 'fa-pause');
     playButton.setAttribute('title', 'Pause');
+    container.classList.add('glow');
 }
 
 const pauseMusic = () => {
@@ -60,6 +38,7 @@ const pauseMusic = () => {
     audioElement.pause()
     playButton.classList.replace('fa-pause', 'fa-play');
     playButton.setAttribute('title', 'Play');
+    container.classList.remove('glow');
 }
 
 playButton.addEventListener('click', isMusicPlaying);
@@ -71,7 +50,7 @@ const loadSong = (song) => {
     artist.textContent = song.artist;
     artist.title = song.artist;
     audioElement.src = `./music/${song.name}.mp3`;
-    image.style.background = `url(../images/${song.image}.jpg) center center no-repeat`;
+    image.style.backgroundImage = `url(../images/${song.image}.jpg)`;
 }
 
 let songIndex = 0;
@@ -128,7 +107,7 @@ const updateProgressBar = evt => {
     }
 }
 
-const clickToProgressTroughSong = evt => {
+const clickToProgressThroughSong = evt => {
     const { duration } = audioElement;
     const songPartition = 0.05;
     if (evt.keyCode == '39') {
@@ -155,7 +134,7 @@ const controlVolume = function (evt) {
     }
 }
 
-document.addEventListener('keydown', clickToProgressTroughSong);
+document.addEventListener('keydown', clickToProgressThroughSong);
 document.addEventListener('keydown', controlVolume);
 prevButton.addEventListener('click', prevSong);
 forwButton.addEventListener('click', nextSong);
